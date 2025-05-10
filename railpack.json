@@ -1,14 +1,10 @@
 {
-  "$schema": "https://schema.railpack.com",     
-  "setup": [
-    // (only if you need extra system packages–usually not required)
-  ],
+  "$schema": "https://schema.railpack.com",
   "install": [
-    "pip install --upgrade pip",                  // ensure latest pip
-    "pip install -r requirements.txt"             // install your deps
+    "pip install --upgrade pip",
+    "pip install -r requirements.txt"
   ],
   "start": [
-    "gunicorn app:app --bind 0.0.0.0:$PORT"       // start your Flask app
+    "gunicorn app:app --bind 0.0.0.0:$PORT"
   ]
 }
-
