@@ -2,15 +2,15 @@
 
 [phases.install]
 cmds = [
-  # ensure venv & pip
-  "python3 -m venv /opt/venv",
-  "source /opt/venv/bin/activate",
-  # upgrade/install via python -m pip
+  # Upgrade pip (optional but recommended)
   "python3 -m pip install --upgrade pip",
+  # Install everything in requirements.txt
   "python3 -m pip install -r requirements.txt"
 ]
 
 [start]
+# Use Gunicorn as the entrypoint
 cmd = "gunicorn app:app --bind 0.0.0.0:$PORT"
+
 
 
