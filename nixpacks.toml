@@ -1,0 +1,4 @@
+# nixpacks.toml
+
+[start]
+cmd = "gunicorn app:app --bind 0.0.0.0:$PORT"                         # Tell Nixpacks how to start your Flask app :contentReference[oaicite:7]{index=7}
