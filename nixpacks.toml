@@ -1,16 +1,6 @@
 # nixpacks.toml
 
-[phases.install]
-cmds = [
-  # Upgrade pip (optional but recommended)
-  "python3 -m pip install --upgrade pip",
-  # Install everything in requirements.txt
-  "python3 -m pip install -r requirements.txt"
-]
-
 [start]
-# Use Gunicorn as the entrypoint
 cmd = "gunicorn app:app --bind 0.0.0.0:$PORT"
-
 
 
